@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs', {title: 'Home'}) %>
+<body>
+    <main class="base-width">
+        <header>
+            <div class="header-logo">
+                Decode Blog
+            </div>
+            <div class="haeder-search">
+                <form action="">
+                    <input type="text" placeholder="Blog search">
+                    <%- include('./partials/button', {icon: '/image/icons/haeder-saerch-icon.png', title: 'Search'}) %>
+                </form>
+            </div>
+            <div class="header-user-actions">
+                <%- include('./partials/button', {icon: '', title: 'Sign up'}) %>
+                <%- include('./partials/button', {icon: '', title: 'Sign in'}) %>
+            </div>
+        </header>
+    </main>
+
+</body>
+</html>
