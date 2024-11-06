@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.7",
+    "decode-blog": "file:",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "mongoose": "^8.8.0",

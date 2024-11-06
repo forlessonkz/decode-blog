@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+app.get('/page', (req, res) => {
+    res.render('postPage')
+})
+
 app.listen(PORT, () => {
     console.log(`Server listening on PORT ${PORT}`)
 })

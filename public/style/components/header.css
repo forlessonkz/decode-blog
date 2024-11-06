@@ -1,6 +1,9 @@
 header {
+    border-bottom: 1px solid rgba(231, 231, 231, 1);
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
+    padding: 38px 0 38px 0;
 }
 
 .header-logo {
@@ -12,11 +15,10 @@ header {
 }
 
 
-
 /* Header search */
 
 .haeder-search {
-    width: 28.6%;
+    width: 29%;
 }
 .haeder-search > form {
     width: 100%;
@@ -29,7 +31,7 @@ header {
 }
 
 .haeder-search input {
-    width: 88%;
+    width: 85%;
     height: 100%;
 
     padding-left: 25px;
@@ -48,6 +50,7 @@ header {
 .haeder-search img {
     width: 20px;
     height: 20px;
+    margin-right: 3px;
 }
 
 .haeder-search button {
@@ -85,4 +88,8 @@ header {
     color: #fff;
     font-size: 16px;
     font-weight: 500;
+}
+
+.icon {
+    filter: invert(100%) brightness(200%);
 }
