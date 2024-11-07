@@ -52,4 +52,5 @@ button, input {
     outline: none;
     background-color: transparent;
     box-sizing: border-box;
+	cursor: pointer;
 }

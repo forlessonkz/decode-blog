@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs', {title: 'User Profile'}) %>
+<body>
+    <div class="base-width">
+        <header class="base-right-left-padding">
+            <a href="/" class="header-logo">
+                Decode Blog
+            </a>
+            <div class="haeder-search">
+                <form action="">
+                    <input type="text" placeholder="Blog search">
+                    <%- include('./partials/button.ejs', {icon: '/image/icons/haeder-saerch-icon.png', title: 'Search', link: ''}) %>
+                </form>
+            </div>
+            <div class="header-user-actions">
+                <div class="haeder-user-profile-photo">
+                    <img class="user-profile-photo" src="" alt="">
+                </div>
+            </div>
+        </header>
+        <div class="profile-container">
+            <div class="content ">
+                <div class="post-container">
+                    <div class="section-header">
+                        <h1>Мои блоги</h1>
+                        <%- include('./partials/button.ejs', {icon: '', title: 'Новый блог', link: ''}) %>
+                    </div>
+                    <div class="post-list">
+                        <%- include('./partials/postItem.ejs', {image: '/image/posts/post001.png'}) %>
+                        <%- include('./partials/postItem.ejs', {image: '/image/posts/post002.png'}) %>
+                    </div>
+                </div>
+                <div class="side-bar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
