@@ -47,9 +47,13 @@ table {
 	border-spacing: 0;
 }
 
-button, input {
+button, input, textarea {
     border: none;
     outline: none;
     background-color: transparent;
     box-sizing: border-box;
+}
+
+button, a {
+	cursor: pointer;
 }

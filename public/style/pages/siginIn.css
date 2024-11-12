@@ -1,0 +1,63 @@
+.sign-in-page {
+    height: 100vh;
+
+}
+
+.sign-in-container,
+.sign-up-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 70vh;
+}
+
+.sign-in-form, 
+.sign-up-form {
+    width: 321px;
+}
+
+.form-header {
+    margin-bottom: 25px;
+    text-align: center;
+
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.sign-in-form > input, 
+.sign-in-form > button,
+.sign-up-form > input, 
+.sign-up-form > button {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.sign-in-form > input,
+.sign-up-form > input {
+    margin-bottom: 15px;
+    border: 1px solid rgba(231, 231, 231, 1);
+
+    padding: 15px 15px 15px 25px;
+}
+
+.sign-in-form > input::placeholder,
+.sign-up-form > input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.sign-in-form > button,
+.sign-up-form > button {
+    background-color: rgba(0, 162, 220, 1);
+
+    padding: 15px 15px 15px 25px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #fff;
+}

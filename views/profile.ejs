@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs', {title: 'User Profile'}) %>
+<body>
+    <div class="base-width profile-page">
+        <header class="base-right-left-padding">
+            <div class="header-logo">
+                Decode Blog
+            </div>
+            <div class="haeder-search">
+                <form action="">
+                    <input type="text" placeholder="Blog search">
+                    <%- include('./partials/button.ejs', {icon: '/image/icons/haeder-saerch-icon.png', title: 'Search', link: ''}) %>
+                </form>
+            </div>
+                <div class="header-user-profile-photo">
+                    <%- include('./partials/userLogo.ejs', {image: '/image/user-photo/user-logo.png'}) %>
+                </div>
+        </header>
+        <div class="profile-container main-container">
+            <div class="post-container">
+                <div class="profile-pge-header sections-header">
+                    <h1 class="">Мои блоги</h1> 
+                    <a href="">
+                        <button class="new-blog-btn">
+                            Новый блог
+                        </button>
+                    </a>
+                </div>
+                <div class="posts-list">
+                    <%- include('./partials/postItem.ejs', {image: '/image/posts/post001.png'}) %>
+                    <%- include('./partials/postItem.ejs', {image: '/image/posts/post002.png'}) %>
+                </div>
+            </div>
+            <div class="side-bar">
+                <div class="user-info">
+                    <%- include('./partials/userLogo.ejs', {image: '/image/user-photo/user-logo.png'}) %>
+                    <h3 class="user-name">Елнур Сейтжанов</h3>
+                    <p class="about-user">В основном пишу про веб - разработку, на React & Redux</p>
+                    <p class="post-item-count">285 постов за все время</p>
+                    <button class="edit-btn">Редактировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

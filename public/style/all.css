@@ -4,3 +4,7 @@
 /* Components */
 @import url('./components/header.css');
 @import url('./components/postItem.css');
+
+@import url('./pages/siginIn.css');
+@import url('./pages/profile.css');
+@import url('./pages/newPost.css');

@@ -1,0 +1,96 @@
+.profile-page > header {
+    align-items: center;
+}
+
+.profile-pge-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 0 40px 0;
+}
+
+.new-blog-btn {
+    width: 122px;
+    height: 50px;
+    background-color: rgba(0, 162, 220, 1);
+    border-radius: 4px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 46px;
+
+    color: #fff;
+}
+
+.header-user-profile-photo  .user-profile-photo {
+    width: 72px;
+    height: 73px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header-user-profile-photo > .user-profile-photo > img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 40px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.user-info > .user-profile-photo {
+    width: 198px;
+    height: 208px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-info > .user-profile-photo > img {
+    width: 100%;
+    height: 100%;
+}
+
+.user-info .user-name {
+    margin: 15px 0 15px 0;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 46px;
+}
+
+.user-info > .about-user, 
+.user-info > .post-item-count{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.user-info > .post-item-count {
+    margin-top: 30px;
+}
+
+.user-info > button {
+    margin-top: 30px;
+
+    width: 155px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: rgba(0, 162, 220, 1);
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 46px;
+}
