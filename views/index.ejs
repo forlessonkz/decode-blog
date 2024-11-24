@@ -9,27 +9,32 @@
                 <div class="post-container">
                     <%- include('./partials/sectionsHeader.ejs', {title: 'Блоги по программированию', description: 'Популярные и лучшие публикации по программированию для начинающих и профессиональных программистов и IT-специалистов.'}) %>
                     <div class="posts-list">
-                        <%- include('./partials/postItem.ejs', {image: '/image/posts/post001.png'}) %>
-                        <%- include('./partials/postItem.ejs', {image: '/image/posts/post002.png'}) %>
+                        <% posts.forEach(post => { %>
+                            <%- include('./partials/postItem.ejs', {
+                                image: post.image, 
+                                postTitle: post.postTitle, 
+                                postDescription: post.postDescription, 
+                                postCategory: post.postCategory.categoryTitle, 
+                                author: post.author.full_name,
+                                _id: post._id}) 
+                            %>
+                        <% }) %>
                     </div>
                 </div>
                 <div class="side-bar">
                     <%- include('./partials/sectionsHeader.ejs', {title: 'Категории', description: ''}) %>
                     <ul class="link-list">
-                        <li><a href="">Прогнозы в IT</a></li>
-                        <li><a href="">Веб-разработка</a></li>
-                        <li><a href="">Мобильная разработка</a></li>
-                        <li><a href="">Фриланс</a></li>
-                        <li><a href="">Алгоритмы</a></li>
-                        <li><a href="">Тестирование IT систем</a></li>
-                        <li><a href="">Разработка игр</a></li>
-                        <li><a href="">Дизайн и юзабилити</a></li>
-                        <li><a href="">Искуственный интелект</a></li>
-                        <li><a href="">Машинное обучение</a></li>
+                        <% data.forEach((item) => { %>
+                            <li>
+                                <a href="/<%= item.key %>"><%= item.categoryTitle %></a>
+                            </li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>
         </div>
     </main>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/deletePost.js" defer></script> -->
 </body>
 </html>

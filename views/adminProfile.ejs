@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs', {title: 'User Profile'}) %>
+    <%- include('./partials/head.ejs', {title: 'Admin Profile'}) %>
 <body>
     <div class="base-width profile-page">
         <%- include('./partials/header.ejs', {link: ''}) %>
@@ -8,10 +8,12 @@
             <div class="post-container">
                 <div class="profile-pge-header sections-header">
                     <h1 class="">Мои блоги</h1> 
-                    <a href="/new">
-                        <button class="new-blog-btn">
-                            Новый блог
-                        </button>
+                    <a href="">
+                        <a href="/new">
+                            <button class="new-blog-btn">
+                                Новый блог
+                            </button>
+                        </a>
                     </a>
                 </div>
                 <div class="posts-list">
@@ -22,7 +24,8 @@
                             postDescription: post.postDescription, 
                             postCategory: post.postCategory.categoryTitle, 
                             author: post.author.full_name,
-                            _id: post._id}) %>
+                            _id: post._id}) 
+                        %>
                     <% }) %>
                 </div>
             </div>

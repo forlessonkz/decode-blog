@@ -1,3 +1,9 @@
-<div class="user-profile-photo">
-    <img src="<%= image %>" alt="">
-</div>
+<% if(user._id && user.isAdmin) { %>
+    <a href="/admin/<%= user._id %>" class="user-profile-photo">
+        <img src="<%= image %>" alt="">
+    </a>
+<% } else if (user._id && !user.isAdmin){ %>
+    <a href="/profile/<%= user._id %>" class="user-profile-photo">
+        <img src="<%= image %>" alt="">
+    </a>
+<% } %>

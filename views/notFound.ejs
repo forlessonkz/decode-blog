@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs', {title: 'Not Found'}) %>
+<body>
+    <main class="base-width">
+        <%- include('./partials/header.ejs', {link: ''}) %>
+        <div class="content">
+            <div class="post-container">
+                <div class="posts-list">
+                    <h1>Not Found!</h1>
+                </div>
+            </div>
+            <div class="side-bar">
+                <%- include('./partials/sectionsHeader.ejs', {title: 'Категории', description: ''}) %>
+                <ul class="link-list">
+                    <% data.forEach((item) => { %>
+                        <li>
+                            <a href="/<%= item.key %>"><%= item.categoryTitle %></a>
+                        </li>
+                    <% }) %>
+
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -23,6 +23,10 @@
     color: #fff;
 }
 
+.user-profile-photo {
+    display: block;
+}
+
 .header-user-profile-photo  .user-profile-photo {
     width: 72px;
     height: 73px;
@@ -81,9 +85,8 @@
     margin-top: 30px;
 }
 
-.user-info > button {
-    margin-top: 30px;
-
+.user-info > .edit-btn,
+.user-info > .ext-btn {
     width: 155px;
     height: 50px;
     border-radius: 4px;
@@ -93,4 +96,12 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 46px;
+}
+
+.edit-btn {
+    margin-top: 30px;
+}
+
+.ext-btn {
+    margin-top: 10px;
 }

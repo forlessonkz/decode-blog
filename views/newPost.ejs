@@ -22,24 +22,35 @@
                 <h1 class="sections-header">
                     Новый блог
                 </h1>
-                <form class="new-post-form" action="">
-                    <input type="text" placeholder="Введите заголовок блога">
-                    <input list="options" id="choices" name="choices" placeholder="Выберите категорию">
+                <form 
+                    class="new-post-form" 
+                    action="/api/posts/new" 
+                    method="POST" 
+                    enctype="multipart/form-data"
+                >
+
+                    <input type="text" placeholder="Введите заголовок блога" name="postTitle">
+                    <input list="options" id="choices" placeholder="Выберите категорию" name="postCategory">
                     <datalist id="options">
-                      <option value="Опция 1">
-                      <option value="Опция 2">
-                      <option value="Опция 3">
+                        <% data.forEach((item) => { %>
+                            <option value="<%= item._id %>" name="postCategory"><%= item.categoryTitle %></option>
+                        <% }) %>
                     </datalist>
+                
+                    <fieldset>
+                        <!-- <button type="submit" class="add-images-btn">
+                            Выберите картинку
+                        </button> -->
+                        <input type="file" name="image">
+                    </fieldset>
+
+                    <div class="">
+                        <textarea class="custom-input" placeholder="Введите описание блога" name="postDescription"></textarea>
+                    </div>
+                    <button type="submit" class="create-new-post">
+                        Создать пост
+                    </button>
                 </form>
-                <button class="add-images-btn">
-                    Выберите картинку
-                </button>
-                <div class="">
-                    <textarea class="custom-input" placeholder="Введите описание блога"></textarea>
-                </div>
-                <button class="create-new-post">
-                    Создать пост
-                </button>
             </div>
         </div>
     </div>

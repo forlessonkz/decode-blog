@@ -45,3 +45,26 @@
 .post-user-actions > div img {
     margin-right: 8px;
 }
+
+.post-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delete-btn, .edit-btn {
+    padding: 15px 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.delete-btn {
+    background-color: red;
+    margin-right: 5px;
+} 
+
+.edit-btn {
+    background-color: orange;
+} 

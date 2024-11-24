@@ -5,11 +5,11 @@
     <div class="base-width sign-in-page">
         <%- include('./partials/header.ejs', {link: ''}) %>
         <div class="sign-in-container">
-            <form action="" class="sign-in-form">
+            <form action="/api/signin" method="POST" class="sign-in-form">
                 <h2 class="form-header">Вход</h2>
-                <input type="text" placeholder="Введите e-mail">
-                <input type="text" placeholder="Введите пароль">
-                <button>Войти</button>
+                <input type="email" placeholder="Введите e-mail" name="email">
+                <input type="password" placeholder="Введите пароль" name="password">
+                <button type="submit">Войти</button>
             </form>
         </div>
     </div>

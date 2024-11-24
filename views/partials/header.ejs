@@ -8,8 +8,15 @@
             <%- include('./button', {icon: '/image/icons/haeder-saerch-icon.png', title: 'Search', likn: ''}) %>
         </form>
     </div>
-    <div class="header-user-actions">
-        <%- include('./button', {icon: '', title: 'Sign up', link: '/signUp'}) %>
-        <%- include('./button', {icon: '', title: 'Sign in', link: '/signIn'}) %>
-    </div>
+    
+        <% if(user._id && user.full_name.length > 0) { %>
+            <div class="header-user-profile-photo">
+                <%- include('./userLogo.ejs', {image: '/image/user-photo/user-logo.png'}) %>
+            </div>
+        <% } else { %> 
+            <div class="header-user-actions">
+                <%- include('./button', {icon: '', title: 'Sign up', link: '/signUp'}) %>
+                <%- include('./button', {icon: '', title: 'Sign in', link: '/signIn'}) %>
+            </div>
+        <% } %> 
 </header>

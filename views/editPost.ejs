@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs', {title: 'Edit Post'}) %>
+<body>
+    <div class="base-width profile-page">
+        <header class="base-right-left-padding">
+            <a href="/" class="header-logo">
+                Decode Blog
+            </a>
+            <div class="haeder-search">
+                <form action="">
+                    <input type="text" placeholder="Blog search">
+                    <%- include('./partials/button', {icon: '/image/icons/haeder-saerch-icon.png', title: 'Search', link: ''}) %>
+                </form>
+            </div>
+            <div class="header-user-profile-photo">
+                <%- include('./partials/userLogo.ejs', {image: '/image/user-photo/user-logo.png'}) %>
+            </div>
+        </header>
+        <div class="new-post-page base-right-left-padding">
+            <div class="new-post-container  main-container">
+                <h1 class="sections-header">
+                    Редактировать пост
+                </h1>
+                <form 
+                    class="new-post-form" 
+                    action="/api/posts/edit" 
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+                    <fieldset>
+                        <input type="hidden" value="<%= post._id %>" name="id">
+                    </fieldset>
+                    <input type="text" value="<%= post.postTitle %>" placeholder="Введите заголовок блога" name="postTitle">
+                    <fieldset>
+                        <label for="">Выберите категорию</label>
+                        <select name="postCategory" id="" >
+                            <%# позже доработать с формами (верстку и логику). (логика урок 14 ) %>
+                            <% data.forEach((item) => { 
+                                if(item.id == item.data) {
+                            %>
+                                <option value="<%= item._id %>" selected><%= item.categoryTitle %></option>
+                            <%
+                                }else{
+                            %>
+                                <option value="<%= item._id %>"><%= item.categoryTitle %></option>
+                                    
+                            <% 
+                                }
+                                }) 
+                            %>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <input type="file" name="image">
+                    </fieldset>
+                    <div class="">
+                        <textarea class="custom-input" name="postDescription">
+                            <%= post.postDescription %>
+                        </textarea>
+                    </div>
+                    <button type="submit" class="create-new-post">
+                        Создать пост
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

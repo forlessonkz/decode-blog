@@ -3,11 +3,18 @@
         <img src="<%- image %>" alt="post img">
     </div>
     <div class="post-description">
-        <h1 class="post-title">
-            Обзор Report Manager от Webix
-        </h1>
+        <div class="post-title-container">
+            <h1 class="post-title">
+                <%= postTitle %>
+            </h1>
+            
+            <div class="post-title-btns">
+                <a onclick="deletePost('<%= _id %>', '<%= author %>')" class="delete-btn">Delete</a>
+                <a href="/edit/<%=_id %>" class="edit-btn">Edit</a>
+            </div>
+        </div>
         <p>
-            Осень 2020 года стала плодотворным временем для специалистов Webix. Команда Webix выпустила восьмую версию библиотеки пользовательского интерфейса Webix с двумя новыми комплексными виджетами. Первый - зто Scheduler, о котором мы подробно говорили ранее. Второй виджет - это Gantt chart в JavaScript. Подробную информацию об этом виджете Вы можете найти в статье. Ноябрь продолжает тенденцию, и мы спешим поделиться с Вами новым комплексным виджетом Report Manager. Давайте рассмотрим ег
+            <%= postDescription %>
         </p>
     </div>
     <div class="post-user-actions">
@@ -32,14 +39,16 @@
         <div>
             <img src="/image/icons/forums.svg" alt="">
             <div>
-                Web - development
+                <%= postCategory %>
             </div>
         </div>
         <div>
             <img src="/image/icons/person.svg" alt="">
             <div>
-                otDaur
+                <%= author %>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/deletePost.js"></script>
 </div>
